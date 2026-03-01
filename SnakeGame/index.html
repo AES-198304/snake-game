@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Snake Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="welcome-screen" id="welcomeScreen">
+            <h1>SNAKE GAME</h1>
+            <div class="form-group">
+                <label for="nickname">Enter Your Nickname:</label>
+                <input type="text" id="nickname" maxlength="15" placeholder="Player">
+            </div>
+            <div class="form-group">
+                <label>Select Difficulty:</label>
+                <div class="difficulty-buttons">
+                    <button class="difficulty-btn" data-level="easy">Easy</button>
+                    <button class="difficulty-btn" data-level="medium">Medium</button>
+                    <button class="difficulty-btn" data-level="hard">Hard</button>
+                </div>
+            </div>
+            <button id="startGameBtn">START GAME</button>
+        </div>
+
+        <div class="game-screen" id="gameScreen">
+            <div class="game-header">
+                <div class="score-display">
+                    <span>Player: <span id="playerNameDisplay">Player</span></span>
+                    <span>Score: <span id="scoreDisplay">0</span></span>
+                    <span>High Score: <span id="highScoreDisplay">0</span></span>
+                </div>
+                <div class="level-display">
+                    Level: <span id="levelDisplay">Easy</span>
+                </div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+
+        <div class="game-over-screen" id="gameOverScreen">
+            <h2>GAME OVER</h2>
+            <div class="game-stats">
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>High Score: <span id="finalHighScore">0</span></p>
+                <p id="newHighScoreMessage">Congratulations! New High Score!</p>
+            </div>
+            <div class="game-over-buttons">
+                <button id="playAgainBtn">PLAY AGAIN</button>
+                <button id="exitGameBtn">EXIT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
